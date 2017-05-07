@@ -1,0 +1,17 @@
+{
+  "manifest_version": 1,
+
+  "name": "AutoSkip",
+  "description": "Auto skip video player",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  
+  "permissions": [
+    "activeTab",
+    "storage"
+  ]
+}
