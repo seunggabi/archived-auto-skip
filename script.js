@@ -12,13 +12,19 @@
 // 	matching(data.target);
 // });
 //
-document.querySelector('#target').addEventListener('change', function () {
-	callback();
-});
+// document.querySelector('#target').addEventListener('change', function () {
+// 	callback();
+// });
+//
+// function callback() {
+// 	chrome.tabs.executeScript({
+// 		code: 'console.log(document.querySelector("body").innerText)'
+// 	}, function (result) {
+// 	});
+// }
 
-function callback() {
-	chrome.tabs.executeScript({
-		code: 'console.log(document.querySelector("body").innerText)'
-	}, function (result) {
-	});
-}
+function callback(event) {
+	console.log(event);
+};
+
+document.addEventListener('DOMSubtreeModified', callback);
