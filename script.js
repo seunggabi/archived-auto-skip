@@ -12,10 +12,10 @@ function init() {
 		});
 	});
 
-	youtube && (window.youtube = setInterval(callback, 1000));
+	youtube && (window.youtube = setInterval(callback, 300));
 	naver && observer.observe(naver, { attributes : true, attributeFilter : ["style"] });
-	twitch && (window.twitch = setInterval(callback, 1000));
-	jobplanet && (window.jobplanet = setInterval(callback, 1000));
+	twitch && (window.twitch = setInterval(callback, 300));
+	jobplanet && (window.jobplanet = setInterval(callback, 300));
 }
 
 function callback() {
