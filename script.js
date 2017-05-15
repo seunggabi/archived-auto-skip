@@ -12,7 +12,7 @@ function init() {
 		});
 	});
 
-	youtube && youtube.addEventListener("DOMSubtreeModified", callback);
+	youtube && (window.youtube = setInterval(callback, 1000));
 	naver && observer.observe(naver, { attributes : true, attributeFilter : ["style"] });
 	twitch && (window.twitch = setInterval(callback, 1000));
 	jobplanet && (window.jobplanet = setInterval(callback, 1000));
@@ -32,6 +32,6 @@ function callback() {
 }
 
 (function(){
-	window.addEventListener("load", init);
+	window.onload = init;
 	window.addEventListener("popstate", init);
 })();
