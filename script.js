@@ -28,7 +28,7 @@ function callback() {
 	youtube && (youtube.click() || console.log("YouTube"));
 	//naver && (naver.click() || console.log("Naver"));
 	twitch && (clearInterval(window.twitch) || (twitch.src = "") || twitch.remove() || console.log("Twitch"));
-	jobplanet && (jobplanet.click() || clearInterval(window.jobplanet) || console.log("JobPlanet"));
+	jobplanet && (jobplanet.click() || console.log("JobPlanet"));
 }
 
 (function(){
