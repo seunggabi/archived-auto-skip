@@ -5,7 +5,7 @@ function init() {
 	var youtube = hostname === "www.youtube.com";
 	var twitch = hostname === "www.twitch.tv";
 	var jobplanet = hostname === "www.jobplanet.co.kr";
-	var naver = document.querySelector(".u_rmc_btn_skip");
+	var naver = hostname === "www.naver.com";
 
 	var observer = new MutationObserver(function(mutations) {
 		mutations.forEach(function(mutationRecord) {
@@ -27,7 +27,7 @@ function callback() {
 		document.querySelector("#video_ad iframe").contentWindow.document.querySelector(".skip");
 
 	youtube && (youtube.click() || console.log("YouTube"));
-	//naver && (naver.click() || console.log("Naver"));
+	naver && (naver.click() || console.log("Naver"));
 	twitch && (clearInterval(window.twitch) || (twitch.src = "") || twitch.remove() || console.log("Twitch"));
 	jobplanet && (jobplanet.click() || console.log("JobPlanet"));
 }
