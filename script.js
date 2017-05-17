@@ -5,7 +5,7 @@ function init() {
 	var youtube = hostname === "www.youtube.com";
 	var twitch = hostname === "www.twitch.tv";
 	var jobplanet = hostname === "www.jobplanet.co.kr";
-	var naver = hostname === "www.naver.com";
+	var naver = hostname === "tv.naver.com";
 
 	var observer = new MutationObserver(function(mutations) {
 		mutations.forEach(function(mutationRecord) {
@@ -33,6 +33,6 @@ function callback() {
 }
 
 (function(){
-	window.onload = init;
+	window.addEventListener("load", init);
 	window.addEventListener("popstate", init);
 })();
