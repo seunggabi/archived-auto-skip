@@ -7,16 +7,10 @@ function init() {
 	var jobplanet = hostname === "www.jobplanet.co.kr";
 	var naver = hostname === "tv.naver.com";
 
-	var observer = new MutationObserver(function(mutations) {
-		mutations.forEach(function(mutationRecord) {
-			callback();
-		});
-	});
-
 	youtube && (window.youtube = setInterval(callback, 300));
 	twitch && (window.twitch = setInterval(callback, 300));
 	jobplanet && (window.jobplanet = setInterval(callback, 300));
-	naver && observer.observe(naver, { attributes : true, attributeFilter : ["style"] });
+	naver && (window.naver = setInterval(callback, 300));
 }
 
 function callback() {
