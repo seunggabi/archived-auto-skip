@@ -5,7 +5,7 @@ function init() {
 	var youtube = hostname === "www.youtube.com";
 	var twitch = hostname === "www.twitch.tv";
 	var jobplanet = hostname === "www.jobplanet.co.kr";
-	var naver = hostname === "tv.naver.com";
+	var naver = hostname.indexOf("naver.com") != -1;
 
 	youtube && (window.youtube = setInterval(callback, 300));
 	twitch && (window.twitch = setInterval(callback, 300));
