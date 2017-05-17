@@ -19,14 +19,12 @@ function callback() {
 	var twitch = document.querySelector(".player-video iframe");
 	var jobplanet = document.querySelector("#video_ad iframe") &&
 		document.querySelector("#video_ad iframe").contentWindow.document.querySelector(".skip");
-
 	youtube && (youtube.click() || console.log("YouTube"));
-	naver && (naver.click() || console.log("Naver"));
+	naver && naver.style.display !== "none" && (naver.click() || (naver.style.display = "none") || console.log("Naver"));
 	twitch && (clearInterval(window.twitch) || (twitch.src = "") || twitch.remove() || console.log("Twitch"));
 	jobplanet && (jobplanet.click() || console.log("JobPlanet"));
 }
 
 (function(){
-	window.addEventListener("load", init);
-	window.addEventListener("popstate", init);
+	init();
 })();
