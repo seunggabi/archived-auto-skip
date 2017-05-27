@@ -17,7 +17,11 @@
       a {
         color: black;
       }
+      .hidden {
+        display: none;
+      }
     </style>
+    <script src="popup_script.js"></script>
   </head>
   <body>
     <h1>AutoSkip</h1>
@@ -43,6 +47,13 @@
       사용해보시고 좋다고 느껴지시면 좋은 리뷰 부탁드려용!
       <a href="https://chrome.google.com/webstore/detail/autoskip/bmiijndgbkepjhffnidelmdkagfgcnil/reviews?hl=ko"
         target="_blank">(링크)</a>
+    </div>
+    <br/>
+    <div>
+      [개발자의 다른 사이트] <a href="#" onclick=toggleSiteList()>(펼치기)</a>
+      <div id="siteList" class="hidden">
+        - <a href="http://ExcelMergeTool.com" target="_blank">Excel Merge Tool</a>
+      </div>
     </div>
   </body>
 </html>

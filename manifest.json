@@ -3,7 +3,7 @@
 
   "name": "AutoSkip",
   "description": "Auto skip video player",
-  "version": "2.3",
+  "version": "2.4",
 
   "browser_action": {
     "default_icon": "icon.png",
