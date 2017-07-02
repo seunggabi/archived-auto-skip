@@ -1,8 +1,7 @@
 function init() {
-	console.log("AutoSkip load!");
 	var hostname = document.location.hostname;
 
-	var youtube = hostname === "www.youtube.com";
+	var youtube = hostname === "www.youtube.com" || hostname === "www.dailymotion";
 	var twitch = hostname === "www.twitch.tv";
 	var jobplanet = hostname === "www.jobplanet.co.kr";
 	var naver = hostname.indexOf("naver.com") != -1;
