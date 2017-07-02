@@ -8,6 +8,7 @@ function init() {
 	var naver = hostname.indexOf("naver.com") != -1;
 	var kakao = hostname.indexOf("kakao.com") != -1;
 	var afreeca = hostname === "play.afreecatv.com";
+	var dramalink = hostname === "dramalink.net";
 
 	youtube && (window.youtube = setInterval(callback, 300));
 	twitch && (window.twitch = setInterval(callback, 300));
@@ -15,6 +16,7 @@ function init() {
 	naver && (window.naver = setInterval(callback, 300));
 	kakao && (document.domain = "kakao.com") && (window.kakao = setInterval(callback, 300));
 	afreeca && (window.afreeca = setInterval(callback, 300));
+	dramalink && (window.dramalink = setInterval(callback, 300))
 }
 
 function callback() {
@@ -26,6 +28,7 @@ function callback() {
 	var kakao = document.querySelector("#player_iframe iframe") &&
 		document.querySelector("#player_iframe iframe").contentWindow.document.querySelector("#adSkipBtn");
 	var afreeca = document.querySelector("#promotion_btn_skip");
+	var dramalink = document.querySelector(".dmp_AdSkipButton-icon");
 
 	youtube && (youtube.click() || console.log("YouTube"));
 	twitch && (clearInterval(window.twitch) || (twitch.src = "") || twitch.remove() || console.log("Twitch"));
@@ -33,6 +36,7 @@ function callback() {
 	naver && naver.style.display !== "none" && (naver.click() || (naver.style.display = "none") && console.log("Naver"));
 	kakao && kakao.className.indexOf("hide") === -1 && (kakao.click() || (kakao.className += "hide") && console.log("Kakao"));
 	afreeca && afreeca.style.display !== "none" && afreeca.childElementCount === 1 && (afreeca.click() || console.log("Afreeca"));
+	dramalink && (dramalink.click() || console.log("DramaLink"));
 }
 
 (function(){
