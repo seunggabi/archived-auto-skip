@@ -21,11 +21,13 @@
         display: none;
       }
     </style>
+    <script src="config.js"></script>
     <script src="popup_script.js"></script>
   </head>
   <body>
     <h1>AutoSkip</h1>
-    <div>만든사람: seunggabi</div>
+    <div>YouTube 비활성화: <input id="disableCheckbox" type="checkbox"></div>
+    <div>만든사람: seunggabi(feat: ㅇㄱㅇ)</div>
     <div>이메일: seunggabi@naver.com</div>
     <div>AutoSkip 가능사이트를 계속 늘릴 예정입니다.
     <div>추가 원하는 사이트 메일로 보내주세용!</div>
@@ -52,7 +54,7 @@
     </div>
     <br/>
     <div>
-      [개발자의 다른 사이트] <a href="#" onclick=toggleSiteList()>(펼치기)</a>
+      [개발자의 다른 사이트] <a id="siteListButton" href="#">(펼치기)</a>
       <div id="siteList" class="hidden">
         - <a href="http://ExcelMergeTool.com" target="_blank">Excel Merge Tool</a>
       </div>

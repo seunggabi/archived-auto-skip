@@ -21,6 +21,11 @@ function init() {
 }
 
 function callback() {
+	var autoSkipDisable = getCookie("AutoSkipDisable");
+	if(autoSkipDisable === "1") {
+		return;
+	}
+
 	var youtube = document.querySelector(".videoAdUiSkipButton");
 	var twitch = document.querySelector(".player-video iframe");
 	var jobplanet = document.querySelector("#video_ad iframe") &&
@@ -32,13 +37,30 @@ function callback() {
 	var dailymotion = document.querySelector(".dmp_AdSkipButton-icon");
 	var dailymotionYouTube = document.querySelector(".dmp_VideoView-ad-slot");
 
-	youtube && youtube.click() && console.log("!!");
+	youtube && youtube.click();
 	twitch && (clearInterval(window.twitch) || (twitch.src = "") || twitch.remove());
 	jobplanet && jobplanet.click();
 	naver && (naver.style.display !== "none" && naver.click() || (naver.style.display = "none"));
 	kakao && (kakao.className.indexOf("hide") === -1 && kakao.click() || (kakao.className += "hide"));
 	afreeca && (afreeca.style.display !== "none" && afreeca.childElementCount === 1 && afreeca.click());
 	dailymotion && dailymotion.click() || dailymotionYouTube && dailymotionYouTube.remove();
+}
+
+/* 쿠키함수출처: https://www.w3schools.com/js/js_cookies.asp */
+function getCookie(cname) {
+	var name = cname + "=";
+	var decodedCookie = decodeURIComponent(document.cookie);
+	var ca = decodedCookie.split(';');
+	for(var i = 0; i <ca.length; i++) {
+		var c = ca[i];
+		while (c.charAt(0) == ' ') {
+			c = c.substring(1);
+		}
+		if (c.indexOf(name) == 0) {
+			return c.substring(name.length, c.length);
+		}
+	}
+	return "";
 }
 
 (function(){
