@@ -30,14 +30,15 @@ function callback() {
 		document.querySelector("#player_iframe iframe").contentWindow.document.querySelector("#adSkipBtn");
 	var afreeca = document.querySelector("#promotion_btn_skip");
 	var dailymotion = document.querySelector(".dmp_AdSkipButton-icon");
+	var dailymotionYouTube = document.querySelector(".dmp_VideoView-ad-slot");
 
-	youtube && youtube.click();
+	youtube && youtube.click() && console.log("!!");
 	twitch && (clearInterval(window.twitch) || (twitch.src = "") || twitch.remove());
 	jobplanet && jobplanet.click();
 	naver && (naver.style.display !== "none" && naver.click() || (naver.style.display = "none"));
 	kakao && (kakao.className.indexOf("hide") === -1 && kakao.click() || (kakao.className += "hide"));
 	afreeca && (afreeca.style.display !== "none" && afreeca.childElementCount === 1 && afreeca.click());
-	dailymotion && dailymotion.click();
+	dailymotion && dailymotion.click() || dailymotionYouTube && dailymotionYouTube.remove();
 }
 
 (function(){
