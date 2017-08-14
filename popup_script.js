@@ -18,10 +18,10 @@ function toggleDisableCheckbox(e) {
 	};
 
 	if(e.target.checked) {
-		cookie.value = "1";
+		cookie.value = "true";
 		cookie.expirationDate = makeDateTime(365);
 	} else {
-		cookie.value = "0";
+		cookie.value = "false";
 		cookie.expirationDate = makeDateTime(-1);
 	}
 	chrome.cookies.set(cookie);
@@ -40,7 +40,7 @@ function renderView() {
 	chrome.cookies.get({url: COOKIE_URL, name: COOKIE_NAME}, function(c){
 		var isDisable = c && c.value;
 
-		if(isDisable === "1") {
+		if(isDisable === "true") {
 			disableCheckbox.checked = true;
 		} else {
 			disableCheckbox.checked = false;

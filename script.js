@@ -22,7 +22,7 @@ function init() {
 
 function callback() {
 	var autoSkipDisable = getCookie("AutoSkipDisable");
-	if(autoSkipDisable === "1") {
+	if(autoSkipDisable === "true") {
 		return;
 	}
 
