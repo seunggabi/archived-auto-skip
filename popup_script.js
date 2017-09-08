@@ -1,5 +1,3 @@
-
-
 function toggleSiteList() {
 	if(document.querySelector("#siteList").className.indexOf("hidden") >= 0) {
 		document.querySelector("#siteList").className = "";
@@ -54,7 +52,6 @@ function init() {
 	bindEvent();
 }
 
-/* 쿠키함수출처: https://www.w3schools.com/js/js_cookies.asp */
 function makeDateTime(exdays) {
 	var d = new Date();
 	d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
