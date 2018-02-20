@@ -3,7 +3,7 @@
 
   "name": "AutoSkip",
   "description": "Auto skip video player",
-  "version": "2.7",
+  "version": "3.0",
 
   "browser_action": {
     "default_icon": "icon.png",
@@ -13,7 +13,7 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["script.js"]
+      "js": ["auto-skip.js"]
     }
   ],
 
