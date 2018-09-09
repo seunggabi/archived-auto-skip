@@ -24,7 +24,7 @@ function callback() {
 		return;
 	}
 
-	var youtube = document.querySelector(".videoAdUiSkipButton");
+	var youtube = document.querySelector(".videoAdUiSkipButton") || document.querySelector(".ytp-ad-skip-button");
 	var twitch = document.querySelector(".player-video iframe");
 	var naver = document.querySelector(".u_rmc_btn_skip") || document.querySelector(".skipBtn");
 	var jobplanet = document.querySelector("#extensionSkip") || document.querySelector("#video_ad iframe")
