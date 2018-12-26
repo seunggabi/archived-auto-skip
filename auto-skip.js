@@ -1,7 +1,7 @@
 function init() {
 	var hostname = document.location.hostname;
 
-	var youtube = hostname === "www.youtube.com";
+	var youtube = ~hostname.indexOf("youtube.com");
 	var twitch = hostname === "www.twitch.tv";
 	var naver = ~hostname.indexOf("naver.com");
 	var jobplanet = hostname === "www.jobplanet.co.kr";
