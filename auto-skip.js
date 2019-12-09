@@ -3,7 +3,7 @@ function init() {
 
     var youtube = ~hostname.indexOf("youtube.com");
     var twitch = hostname === "www.twitch.tv";
-    var naver = ~hostname.indexOf("naver.com");
+    var naver = ~hostname.indexOf("naver.com") || ~hostname.indexOf("vlive.tv");
     var jobplanet = hostname === "www.jobplanet.co.kr";
     var kakao = ~hostname.indexOf("kakao.com");
     var afreeca = hostname === "play.afreecatv.com";
