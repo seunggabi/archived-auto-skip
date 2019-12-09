@@ -4,45 +4,73 @@
     <meta charset="UTF-8" />
     <style>
       body {
-        width: 400px;
-        padding: 1rem;
+        width:450px;
+        padding:1rem;
       }
       ul, li {
-        padding: 0;
-        margin: 0;
+        padding:0;
+        margin:0;
       }
       li {
-        margin-left: 15px;
+        margin-left:15px;
       }
       a {
-        color: black;
+        color:black;
+      }
+      .hidden {
+        display:none;
+      }
+      .bold {
+        font-weight:bold;
+      }
+      .blue {
+        color: blue;
+      }
+      .red {
+        color: red;
       }
     </style>
+    <script src="config.js"></script>
+    <script src="popup_script.js"></script>
   </head>
   <body>
     <h1>AutoSkip</h1>
     <div>만든사람: seunggabi</div>
-    <div>이메일: seunggabi@naver.com</div>
-    <div>AutoSkip 가능사이트를 계속 늘릴 예정입니다.
-    <div>추가 원하는 사이트 메일로 보내주세용!</div>
-    <div>(많이 사랑해주세요!)</div>
+    <div>이메일: seunggabi@gmail.com</div>
+    <div>블로그: <a href="http://seunggabi.tistory.com" target="_blank">http://seunggabi.tistory.com</a></div>
+    <div>업데이트: 2019.01.05</div>
     <br/>
     <br/>
-    <div>서비스 가능사이트:</div>
+    <div class="bold">[서비스 가능사이트]</div>
     <ul>
-      <li><a href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+      <li><a href="https://www.youtube.com/" target="_blank">YouTube</a>(비활성화: <input id="disableCheckbox" type="checkbox">)</li>
+      <li><a href="https://www.music.youtube.com/" target="_blank">YouTube Music</a></li>
       <li><a href="https://www.twitch.tv/" target="_blank">Twitch</a></li>
+      <li><a href="http://tv.naver.com/" target="_blank">Naver</a></li>
       <li><a href="https://www.jobplanet.co.kr/" target="_blank">JobPlanet</a></li>
-      <li><a href="https://tv.naver.com/" target="_blank">Naver</a></li>
       <li><a href="https://tv.kakao.com/" target="_blank">Kakao</a></li>
       <li><a href="http://www.afreecatv.com/" target="_blank">Afreeca</a></li>
+      <li><a href="http://www.dailymotion.com/" target="_blank">DailyMotion</a></li>
+      <li><a href="http://news.jtbc.joins.com" target="_blank">JTBC</a></li>
+      <li><a href="http://vlive.tv" target="_blank">VLIVE</a></li>
     </ul>
     <br/>
     <br/>
     <div>
-      사용해보시고 좋다고 느껴지시면 좋은 리뷰 부탁드려용!
+      <span class="bold blue">사용해보시고 좋다고 느껴지시면 좋은 리뷰 부탁드려요. :)</span>
       <a href="https://chrome.google.com/webstore/detail/autoskip/bmiijndgbkepjhffnidelmdkagfgcnil/reviews?hl=ko"
-        target="_blank">(링크)</a>
+        target="_blank" class="bold red">(링크)</a>
+    </div>
+    <br/>
+    <div>
+      <div class="bold">
+        [개발자가 만든 것]<a id="siteListButton" href="#">(펼치기)</a>
+      </div>
+      <div id="siteList" class="hidden">
+        <!-- - <a href="http://ExcelMergeTool.com" target="_blank">ExcelMergeTool</a><br> -->
+        - <a href="https://chrome.google.com/webstore/detail/autorefresh/odipbppcfaaedgdlljgjdfneogahefoj?hl=ko" target="_blank">AutoRefresh</a><br>
+        - <a href="http://smartboook.com" target="_blank">SmartBoook</a><br>
+      </div>
     </div>
   </body>
 </html>
