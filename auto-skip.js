@@ -3,7 +3,8 @@ function init() {
 
     var youtube = ~hostname.indexOf("youtube.com");
     var twitch = hostname === "www.twitch.tv";
-    var naver = ~hostname.indexOf("naver.com") || ~hostname.indexOf("vlive.tv");
+    var naver = ~hostname.indexOf("naver.com");
+    var vlive = ~hostname.indexOf("vlive.tv");
     var jobplanet = hostname === "www.jobplanet.co.kr";
     var kakao = ~hostname.indexOf("kakao.com");
     var afreeca = hostname === "play.afreecatv.com";
@@ -31,6 +32,7 @@ function callback() {
 
     var twitch = document.querySelector(".player-video iframe");
     var naver = document.querySelector(".u_rmc_btn_skip") || document.querySelector(".skipBtn");
+    var vlive = document.querySelector(".btn_skip");
     var jobplanet = document.querySelector("#extensionSkip") || document.querySelector("#video_ad iframe")
         && document.querySelector("#video_ad iframe").contentWindow.document.querySelector(".skip");
     var kakao = document.querySelector("#player_iframe iframe") &&
@@ -45,6 +47,7 @@ function callback() {
 
     twitch && ((twitch.src = "") || twitch.remove());
     naver && (naver.style.display !== "none" && naver.click() || (naver.style.display = "none"));
+    vlive && vlive.click();
     jobplanet && jobplanet.click();
     kakao && (~kakao.className.indexOf("hide") && kakao.click() || (kakao.className += "hide"));
     afreeca && (afreeca.style.display !== "none" && afreeca.childElementCount === 1 && afreeca.click());
