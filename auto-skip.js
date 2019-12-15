@@ -14,6 +14,7 @@ function init() {
     youtube && (window.youtube = setInterval(callback, 300));
     twitch && (window.twitch = setInterval(callback, 300));
     naver && (window.naver = setInterval(callback, 300));
+    vlive && (window.naver = setInterval(callback, 300));
     jobplanet && (window.jobplanet = setInterval(callback, 300));
     kakao && (document.domain = "kakao.com") && (window.kakao = setInterval(callback, 300));
     afreeca && (window.afreeca = setInterval(callback, 300));
