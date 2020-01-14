@@ -10,6 +10,7 @@ function init() {
     var afreeca = hostname === "play.afreecatv.com";
     var dailymotion = hostname === "www.dailymotion.com";
     var jtbc = ~hostname.indexOf(".jtbc.");
+    var netflix = ~hostname.indexOf("netflix.com");
 
     youtube && (window.youtube = setInterval(callback, 300));
     twitch && (window.twitch = setInterval(callback, 300));
@@ -19,7 +20,8 @@ function init() {
     kakao && (document.domain = "kakao.com") && (window.kakao = setInterval(callback, 300));
     afreeca && (window.afreeca = setInterval(callback, 300));
     dailymotion && (window.dramalink = setInterval(callback, 300));
-    jtbc && (window.dramalink = setInterval(callback, 300));
+    jtbc && (window.jtbc = setInterval(callback, 300));
+    netflix && (window.netflix = setInterval(callback, 300));
 }
 
 function callback() {
@@ -41,10 +43,12 @@ function callback() {
     var afreeca = document.querySelector("#promotion_btn_skip");
     var dailymotion = document.querySelector(".np_ButtonAdSkip");
     var jtbc = document.querySelector(".vast-skip-button");
+    var netflix = document.querySelector(".skip-credits > a");
 
     youtube && youtube.click();
     youtube2 && youtube2.click();
     jtbc && jtbc.click();
+    netflix && netflix.click();
 
     twitch && ((twitch.src = "") || twitch.remove());
     naver && (naver.style.display !== "none" && naver.click() || (naver.style.display = "none"));
