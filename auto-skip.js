@@ -43,7 +43,7 @@ function callback() {
     var afreeca = document.querySelector("#promotion_btn_skip");
     var dailymotion = document.querySelector(".np_ButtonAdSkip");
     var jtbc = document.querySelector(".vast-skip-button");
-    var netflix = document.querySelector(".skip-credits > a");
+    var netflix = document.querySelector(".skip-credits > a") || document.querySelector("button[data-uia=next-episode-seamless-button]");
 
     youtube && youtube.click();
     youtube2 && youtube2.click();
