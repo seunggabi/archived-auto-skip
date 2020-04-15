@@ -86,6 +86,6 @@ const links = {
 
 const doms = {
   link_wrapper: '<div class="link-wrapper"></div>',
-  a: '<a href="#" target="_blank" class="small-padding-horizontal"></a>',
+  a: '<a href="#" target="_blank" class="padding-left-3"></a>',
   li: '<li>'
 };
