@@ -49,3 +49,6 @@ a:hover, a:focus {
     90% { color: #6b2aff; }
     100% { color: #e82aff; }
 }
+.width-150 {
+    width: 150px;
+}

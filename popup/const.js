@@ -1,11 +1,7 @@
 const COOKIE_URL = "https://www.youtube.com";
 const COOKIE_NAME = "AutoSkipDisable";
 
-const links = {
-  default: {
-    style: "",
-    className: "",
-  },
+const data = {
   site: [
     // {
     //   name: "YouTube",
