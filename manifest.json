@@ -2,12 +2,12 @@
   "manifest_version": 2,
 
   "name": "AutoSkip",
-  "description": "Auto skip video player",
-  "version": "4.4",
+  "description": "다양한 페이지의 광고의 스킵 버튼을 자동으로 눌러줍니다.\n(Automatically click Skip button for advertisements.)",
+  "version": "4.5",
 
   "browser_action": {
-    "default_icon": "icon.png",
-    "default_popup": "popup.html"
+    "default_icon": "images/icon.png",
+    "default_popup": "popup/index.html"
   },
 
   "content_scripts": [
