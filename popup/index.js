@@ -1,9 +1,9 @@
 function renderLink() {
-  a(links.site, $("#site"));
+  a(data.site, $("#site"));
 
-  a(links.review, $("#review"));
+  a(data.review, $("#review"));
 
-  links.project.forEach(link => {
+  data.project.forEach(link => {
     let $wrapper = $(doms.li);
     $wrapper.text(link.name);
 
