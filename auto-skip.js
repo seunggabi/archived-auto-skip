@@ -1,3 +1,5 @@
+// TODO: flexible by data object
+
 function init() {
   const hostname = document.location.hostname;
 
