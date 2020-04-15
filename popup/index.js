@@ -1,20 +1,20 @@
 function renderLink() {
-  const $project = $("#project");
+  a(links.site, $("#site"));
+
+  a(links.review, $("#review"));
+
   links.project.forEach(link => {
     let $wrapper = $(doms.li);
     $wrapper.text(link.name);
 
     a(link, $wrapper);
 
-    $project.append($wrapper);
+    $("#project").append($wrapper);
   });
-
-  const $review = $("#review");
-  a(links.review, $review);
 }
 
 function a(link, $parents) {
-  link.urls.forEach(url => {
+  link.urls && link.urls.forEach(url => {
     let $a = $(doms.a);
     $a.prop("href", url.url);
     $a.text(`(${url.name})`);
@@ -22,6 +22,19 @@ function a(link, $parents) {
 
     $parents.append($a);
   });
+
+  if(link instanceof Array) {
+    link.forEach(l => {
+      let $a = $(doms.a);
+      $a.prop("href", l.url);
+      $a.text(`${l.name}`);
+      $a.addClass(l.className);
+
+      let $li = $(doms.li);
+      $li.append($a);
+      $parents.append($li);
+    })
+  }
 }
 
 function toggleDisableCheckbox(e) {

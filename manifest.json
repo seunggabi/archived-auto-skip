@@ -3,7 +3,7 @@
 
   "name": "AutoSkip",
   "description": "다양한 페이지의 광고의 스킵 버튼을 자동으로 눌러줍니다.\n(Automatically click Skip button for advertisements.)",
-  "version": "4.5",
+  "version": "5.0",
 
   "browser_action": {
     "default_icon": "images/icon.png",

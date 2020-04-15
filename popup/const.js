@@ -7,27 +7,75 @@ const links = {
     className: "",
   },
   site: [
+    // {
+    //   name: "YouTube",
+    //   url: "https://www.youtube.com/",
+    //   image: "",
+    // },
     {
-      name: "",
-      url: "",
+      name: "YouTube Music",
+      url: "https://www.music.youtube.com/",
       image: "",
-      className: "",
-      style: "",
-    }
+    },
+    {
+      name: "Twitch",
+      url: "https://www.twitch.tv/",
+      image: "",
+    },
+    {
+      name: "Naver",
+      url: "http://tv.naver.com/",
+      image: "",
+    },
+    {
+      name: "JobPlanet",
+      url: "https://www.jobplanet.co.kr/",
+      image: "",
+    },
+    {
+      name: "Kakao",
+      url: "https://tv.kakao.com/",
+      image: "",
+    },
+    {
+      name: "Afreeca",
+      url: "http://www.afreecatv.com/",
+      image: "",
+    },
+    {
+      name: "DailyMotion",
+      url: "http://www.dailymotion.com/",
+      image: "",
+    },
+    {
+      name: "JTBC",
+      url: "http://news.jtbc.joins.com",
+      image: "",
+    },
+    {
+      name: "VLIVE",
+      url: "http://vlive.tv",
+      image: "",
+    },
+    {
+      name: "Netflix",
+      url: "http://netflix.com",
+      image: "",
+    },
   ],
   review: {
     className: "red bold",
     urls: [
       {
-        name: "chrome",
+        name: "Chrome",
         url: "https://chrome.google.com/webstore/detail/autoskip/bmiijndgbkepjhffnidelmdkagfgcnil/reviews?hl=ko",
       },
       {
-        name: "whale",
+        name: "Whale",
         url: "https://store.whale.naver.com/detail/elgcmjohjpjgmogomciohcdgofjmddaj",
       },
       {
-        name: "toonation",
+        name: "Toonation",
         url: "https://toon.at/donate/637225213338784448",
       }
     ]
@@ -48,7 +96,7 @@ const links = {
       name: "Auto Skip",
       urls: [
         {
-          name: "whale",
+          name: "Whale",
           url: "https://store.whale.naver.com/detail/elgcmjohjpjgmogomciohcdgofjmddaj",
         }
       ],
@@ -59,11 +107,11 @@ const links = {
       name: "Auto Refresh",
       urls: [
         {
-          name: "chrome",
+          name: "Chrome",
           url: "https://chrome.google.com/webstore/detail/autorefresh/kpblfhpdgghcabcfkndaicjhkppckdfk",
         },
         {
-          name: "whale",
+          name: "Whale",
           url: "https://store.whale.naver.com/detail/dmfiihebfllgebodghhgbldipmpiehem",
         }
       ],
