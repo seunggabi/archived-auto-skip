@@ -1,0 +1,51 @@
+body {
+    width: 400px;
+    padding: 1rem;
+}
+ul, li {
+    padding: 0;
+    margin: 0;
+}
+li {
+    margin-left: 15px;
+}
+a {
+    color: black;
+    text-decoration: none;
+}
+.margin-top-0 {
+    margin-top: 0;
+}
+.hidden {
+    display: none;
+}
+.bold {
+    font-weight: bold;
+}
+.blue {
+    color: blue;
+}
+.red {
+    color: red;
+}
+.padding-left-3 {
+    padding: 0 0 0 3px
+}
+.small {
+    font-size: 0.8em;
+}
+a:hover, a:focus {
+    animation-duration: 3s;
+    animation-name: rainbowLink;
+    animation-iteration-count: infinite;
+}
+@keyframes rainbowLink {
+    0% { color: #ff2a2a; }
+    15% { color: #ff7a2a; }
+    30% { color: #ffc52a; }
+    45% { color: #43ff2a; }
+    60% { color: #2a89ff; }
+    75% { color: #202082; }
+    90% { color: #6b2aff; }
+    100% { color: #e82aff; }
+}

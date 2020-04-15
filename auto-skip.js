@@ -1,17 +1,19 @@
-function init() {
-  var hostname = document.location.hostname;
+// TODO: flexible by data object
 
-  var youtube = ~hostname.indexOf("youtube.com");
-  var twitch = hostname === "www.twitch.tv";
-  var naver = ~hostname.indexOf("naver.com");
-  var vlive = ~hostname.indexOf("vlive.tv");
-  var jobplanet = hostname === "www.jobplanet.co.kr";
-  var kakao = ~hostname.indexOf("kakao.com");
-  var afreeca = hostname === "play.afreecatv.com";
-  var dailymotion = hostname === "www.dailymotion.com";
-  var jtbc = ~hostname.indexOf(".jtbc.");
-  var netflix = ~hostname.indexOf("netflix.com");
-  var chA = ~hostname.indexOf("ichannela.com");
+function init() {
+  const hostname = document.location.hostname;
+
+  const youtube = ~hostname.indexOf("youtube.com");
+  const twitch = hostname === "www.twitch.tv";
+  const naver = ~hostname.indexOf("naver.com");
+  const vlive = ~hostname.indexOf("vlive.tv");
+  const jobplanet = hostname === "www.jobplanet.co.kr";
+  const kakao = ~hostname.indexOf("kakao.com");
+  const afreeca = hostname === "play.afreecatv.com";
+  const dailymotion = hostname === "www.dailymotion.com";
+  const jtbc = ~hostname.indexOf(".jtbc.");
+  const netflix = ~hostname.indexOf("netflix.com");
+  const chA = ~hostname.indexOf("ichannela.com");
 
   youtube && (window.youtube = setInterval(callback, 300));
   twitch && (window.twitch = setInterval(callback, 300));
@@ -27,26 +29,26 @@ function init() {
 }
 
 function callback() {
-  var autoSkipDisable = getCookie("AutoSkipDisable");
+  const autoSkipDisable = getCookie("AutoSkipDisable");
   if (autoSkipDisable === "true") {
     return;
   }
 
-  var youtube = document.querySelector(".videoAdUiSkipButton") || document.querySelector(".ytp-ad-skip-button");
-  var youtube2 = document.querySelector(".ytp-ad-overlay-close-button");
+  const youtube = document.querySelector(".videoAdUiSkipButton") || document.querySelector(".ytp-ad-skip-button");
+  const youtube2 = document.querySelector(".ytp-ad-overlay-close-button");
 
-  var twitch = document.querySelector(".player-video iframe");
-  var naver = document.querySelector(".u_rmc_btn_skip") || document.querySelector(".skipBtn");
-  var vlive = document.querySelector(".btn_skip");
-  var jobplanet = document.querySelector("#extensionSkip") || document.querySelector("#video_ad iframe")
+  const twitch = document.querySelector(".player-video iframe");
+  const naver = document.querySelector(".u_rmc_btn_skip") || document.querySelector(".skipBtn");
+  const vlive = document.querySelector(".btn_skip");
+  const jobplanet = document.querySelector("#extensionSkip") || document.querySelector("#video_ad iframe")
     && document.querySelector("#video_ad iframe").contentWindow.document.querySelector(".skip");
-  var kakao = document.querySelector("#player_iframe iframe") &&
+  const kakao = document.querySelector("#player_iframe iframe") &&
     document.querySelector("#player_iframe iframe").contentWindow.document.querySelector("#adSkipBtn");
-  var afreeca = document.querySelector("#promotion_btn_skip");
-  var dailymotion = document.querySelector(".np_ButtonAdSkip");
-  var jtbc = document.querySelector(".vast-skip-button");
-  var netflix = document.querySelector(".skip-credits > a") || document.querySelector("button[data-uia=next-episode-seamless-button]");
-  var chA = document.querySelector("button.vjs-skip-module");
+  const afreeca = document.querySelector("#promotion_btn_skip");
+  const dailymotion = document.querySelector(".np_ButtonAdSkip");
+  const jtbc = document.querySelector(".vast-skip-button");
+  const netflix = document.querySelector(".skip-credits > a") || document.querySelector("button[data-uia=next-episode-seamless-button]");
+  const chA = document.querySelector("button.vjs-skip-module");
 
   youtube && youtube.click();
   youtube2 && youtube2.click();
@@ -65,11 +67,11 @@ function callback() {
 
 /* reference: https://www.w3schools.com/js/js_cookies.asp */
 function getCookie(cname) {
-  var name = cname + "=";
-  var decodedCookie = decodeURIComponent(document.cookie);
-  var ca = decodedCookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
-    var c = ca[i];
+  const name = cname + "=";
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const ca = decodedCookie.split(';');
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
     while (c.charAt(0) === ' ') {
       c = c.substring(1);
     }
