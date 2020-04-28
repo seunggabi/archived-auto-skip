@@ -63,10 +63,6 @@ const data = {
     className: "red bold",
     urls: [
       {
-        name: "Chrome",
-        url: "https://chrome.google.com/webstore/detail/autoskip/bmiijndgbkepjhffnidelmdkagfgcnil/reviews?hl=ko",
-      },
-      {
         name: "Whale",
         url: "https://store.whale.naver.com/detail/elgcmjohjpjgmogomciohcdgofjmddaj",
       },
