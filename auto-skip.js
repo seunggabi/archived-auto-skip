@@ -36,6 +36,7 @@ function callback() {
 
   const youtube = document.querySelector(".videoAdUiSkipButton") || document.querySelector(".ytp-ad-skip-button");
   const youtube2 = document.querySelector(".ytp-ad-overlay-close-button");
+  const youtube3 = document.querySelector(".style-scope.yt-button-renderer.style-blue-text.size-default");
 
   const twitch = document.querySelector(".player-video iframe");
   const naver = document.querySelector(".u_rmc_btn_skip") || document.querySelector(".skipBtn");
@@ -52,6 +53,8 @@ function callback() {
 
   youtube && youtube.click();
   youtube2 && youtube2.click();
+  youtube3 && youtube3.click();
+
   jtbc && jtbc.click();
   netflix && netflix.click();
   chA && chA.click();
