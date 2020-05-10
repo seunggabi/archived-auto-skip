@@ -74,6 +74,17 @@ const data = {
   },
   project: [
     {
+      name: "국민청원",
+      urls: [
+        {
+          name: "Whale",
+          url: "https://store.whale.naver.com/detail/klmljnjajpkoeidgjpdeplhgcflpdelh",
+        }
+      ],
+      className: "bold",
+      style: "",
+    },
+    {
       name: "Clip History",
       urls: [
         {
