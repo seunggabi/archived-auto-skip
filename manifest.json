@@ -17,7 +17,11 @@
   "content_scripts": [
     {
       "matches": ["*://*/*"],
-      "js": ["auto-skip.js"]
+      "js": [
+        "js/jquery.min.js",
+        "js/cookie.js",
+        "auto-skip.js"
+      ]
     }
   ],
 

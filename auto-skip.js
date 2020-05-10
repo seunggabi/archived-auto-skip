@@ -1,31 +1,28 @@
 // TODO: flexible by data object
 
 function init() {
+  const TIMEOUT = 300;
+
   const hostname = document.location.hostname;
+  const urls = [
+    ".youtube.",
+    ".twitch.",
+    ".naver.",
+    ".vlive.",
+    ".jobplanet.",
+    ".kakao.",
+    ".afreecatv.",
+    ".dailymotion.",
+    ".jtbc.",
+  ];
 
-  const youtube = ~hostname.indexOf("youtube.com");
-  const twitch = hostname === "www.twitch.tv";
-  const naver = ~hostname.indexOf("naver.com");
-  const vlive = ~hostname.indexOf("vlive.tv");
-  const jobplanet = hostname === "www.jobplanet.co.kr";
-  const kakao = ~hostname.indexOf("kakao.com");
-  const afreeca = hostname === "play.afreecatv.com";
-  const dailymotion = hostname === "www.dailymotion.com";
-  const jtbc = ~hostname.indexOf(".jtbc.");
-  const netflix = ~hostname.indexOf("netflix.com");
-  const chA = ~hostname.indexOf("ichannela.com");
+  if(urls.some(url => hostname.includes(url))) {
+    if(hostname.includes(".kakao.")) {
+      document.domain = "kakao.com";
+    }
 
-  youtube && (window.youtube = setInterval(callback, 300));
-  twitch && (window.twitch = setInterval(callback, 300));
-  naver && (window.naver = setInterval(callback, 300));
-  vlive && (window.naver = setInterval(callback, 300));
-  jobplanet && (window.jobplanet = setInterval(callback, 300));
-  kakao && (document.domain = "kakao.com") && (window.kakao = setInterval(callback, 300));
-  afreeca && (window.afreeca = setInterval(callback, 300));
-  dailymotion && (window.dramalink = setInterval(callback, 300));
-  jtbc && (window.jtbc = setInterval(callback, 300));
-  netflix && (window.netflix = setInterval(callback, 300));
-  chA && (window.chA = setInterval(callback, 300));
+    setInterval(callback, TIMEOUT);
+  }
 }
 
 function callback() {
@@ -37,6 +34,7 @@ function callback() {
   const youtube = document.querySelector(".videoAdUiSkipButton") || document.querySelector(".ytp-ad-skip-button");
   const youtube2 = document.querySelector(".ytp-ad-overlay-close-button");
   const youtube3 = document.querySelector(".style-scope.yt-button-renderer.style-blue-text.size-default");
+  const youtube4 = $("paper-toast");
 
   const twitch = document.querySelector(".player-video iframe");
   const naver = document.querySelector(".u_rmc_btn_skip") || document.querySelector(".skipBtn");
@@ -54,6 +52,7 @@ function callback() {
   youtube && youtube.click();
   youtube2 && youtube2.click();
   youtube3 && youtube3.click();
+  youtube4 && youtube4.remove();
 
   jtbc && jtbc.click();
   netflix && netflix.click();
@@ -66,23 +65,6 @@ function callback() {
   kakao && (~kakao.className.indexOf("hide") && kakao.click() || (kakao.className += "hide"));
   afreeca && (afreeca.style.display !== "none" && afreeca.childElementCount === 1 && afreeca.click());
   dailymotion && dailymotion.click();
-}
-
-/* reference: https://www.w3schools.com/js/js_cookies.asp */
-function getCookie(cname) {
-  const name = cname + "=";
-  const decodedCookie = decodeURIComponent(document.cookie);
-  const ca = decodedCookie.split(';');
-  for (let i = 0; i < ca.length; i++) {
-    let c = ca[i];
-    while (c.charAt(0) === ' ') {
-      c = c.substring(1);
-    }
-    if (c.indexOf(name) === 0) {
-      return c.substring(name.length, c.length);
-    }
-  }
-  return "";
 }
 
 (function() {
