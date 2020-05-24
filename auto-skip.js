@@ -14,6 +14,7 @@ function init() {
     ".afreecatv.",
     ".dailymotion.",
     ".jtbc.",
+    ".netflix."
   ];
 
   if(urls.some(url => hostname.includes(url))) {
