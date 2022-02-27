@@ -45,7 +45,7 @@ function callback() {
   const afreeca = document.querySelector("#promotion_btn_skip");
   const dailymotion = document.querySelector(".np_ButtonAdSkip");
   const jtbc = document.querySelector(".vast-skip-button");
-  const netflix = document.querySelector(".nf-flat-button-text");
+  const netflix = document.querySelector(".watch-video--skip-content");
   const chA = document.querySelector("button.vjs-skip-module");
 
   youtube && youtube.click();
