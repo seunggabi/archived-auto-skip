@@ -48,6 +48,7 @@ function callback() {
     const dailymotion = document.querySelector(".np_ButtonAdSkip");
     const jtbc = document.querySelector(".vast-skip-button");
     const netflix = document.querySelector(".watch-video--skip-content");
+    const netflix2 = document.querySelector(".watch-video--skip-content-button");
     const chA = document.querySelector("button.vjs-skip-module");
 
     youtube && youtube.click();
@@ -55,6 +56,7 @@ function callback() {
 
     jtbc && jtbc.click();
     netflix && netflix.click();
+    netflix2 && netflix2.click();
     chA && chA.click();
 
     twitch && ((twitch.src = "") || twitch.remove());
