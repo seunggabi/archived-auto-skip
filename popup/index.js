@@ -38,22 +38,27 @@ function a(link, $parents) {
 }
 
 function toggleDisableCheckbox(e) {
-  const cookie = {
-    url: COOKIE_URL,
-    path: "/",
-    name: COOKIE_NAME,
-    value: "",
-    expirationDate: ""
-  };
+  const list = data.site;
+  list.push({ url: COOKIE_URL });
 
-  if(e.target.checked) {
-    cookie.value = "true";
-    cookie.expirationDate = makeDateTime(365);
-  } else {
-    cookie.value = "false";
-    cookie.expirationDate = makeDateTime(-1);
-  }
-  chrome.cookies.set(cookie);
+  list.forEach(url => {
+    let cookie = {
+      url: url.url,
+      path: "/",
+      name: COOKIE_NAME,
+      value: "",
+      expirationDate: ""
+    };
+
+    if(e.target.checked) {
+      cookie.value = "true";
+      cookie.expirationDate = makeDateTime(365);
+    } else {
+      cookie.value = "false";
+      cookie.expirationDate = makeDateTime(-1);
+    }
+    chrome.cookies.set(cookie);
+  });
 }
 
 function bindEvent() {
