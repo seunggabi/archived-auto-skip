@@ -1,12 +1,12 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "AutoSkip",
   "description": "다양한 페이지의 광고의 스킵 버튼을 자동으로 눌러줍니다.\n(Automatically click Skip button for advertisements.)\nYouTube, YouTube Music, Twitch, Naver, JobPlanet\nKakao, Afreeca, DailyMotion, JTBC, VLIVE, Netflix",
   "version": "5.2.6",
   "icons": {
     "128": "images/icon.png"
   },
-  "browser_action": {
+  "action": {
     "default_icon": "images/icon.png",
     "default_popup": "popup/index.html"
   },
@@ -22,9 +22,11 @@
       ]
     }
   ],
+  "host_permissions": [
+    "*://*/*"
+  ],
   "permissions": [
     "tabs",
-    "*://*/*",
     "cookies",
     "activeTab",
     "storage"
