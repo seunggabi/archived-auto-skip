@@ -1,13 +1,18 @@
-const COOKIE_URL = "https://www.youtube.com";
+const COOKIE_URL = "https://seunggabi.com";
 const COOKIE_NAME = "AutoSkipDisable";
 
 const data = {
   site: [
-    // {
-    //   name: "YouTube",
-    //   url: "https://www.youtube.com/",
-    //   image: "",
-    // },
+    {
+      name: "YouTube",
+      url: "https://www.youtube.com/",
+      image: "",
+    },
+    {
+      name: "Netflix",
+      url: "https://www.netflix.com",
+      image: "",
+    },
     {
       name: "YouTube Music",
       url: "https://www.music.youtube.com/",
@@ -20,7 +25,7 @@ const data = {
     },
     {
       name: "Naver",
-      url: "http://tv.naver.com/",
+      url: "https://tv.naver.com/",
       image: "",
     },
     {
@@ -35,27 +40,22 @@ const data = {
     },
     {
       name: "Afreeca",
-      url: "http://www.afreecatv.com/",
+      url: "https://www.afreecatv.com/",
       image: "",
     },
     {
       name: "DailyMotion",
-      url: "http://www.dailymotion.com/",
+      url: "https://www.dailymotion.com/",
       image: "",
     },
     {
       name: "JTBC",
-      url: "http://news.jtbc.joins.com",
+      url: "https://news.jtbc.joins.com",
       image: "",
     },
     {
       name: "VLIVE",
-      url: "http://vlive.tv",
-      image: "",
-    },
-    {
-      name: "Netflix",
-      url: "http://netflix.com",
+      url: "https://vlive.tv",
       image: "",
     },
   ],
